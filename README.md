@@ -38,7 +38,7 @@ I've forked the code to update it for CS6.
 
     ``` bash
     cd ~/Stuff/Adobe
-    hg clone ssh://hg@bitbucket.org/lokkju/adobe_case_sensitive_volumes
+    git clone git://github.com/tzvetkoff/adobe_case_sensitive_volumes.git
     cd adobe_case_sensitive_volumes
     make
     sudo make run
