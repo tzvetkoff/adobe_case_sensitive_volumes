@@ -11,7 +11,7 @@ test:
 clean:
 	rm -rf ./*.dylib* *~ core
 
-run:
+run: lib_override_volume_sensitivity_check.dylib
 ifneq ($(shell whoami),root)
 	@echo "You are not root. Please rerun this command as root (sudo make run)"
 else
