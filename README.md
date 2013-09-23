@@ -9,6 +9,13 @@ And it doesn't just refuse to install on a case-sensitive drive, but it also req
 Well, there's a solution. I've just stumbled upon [this](https://bitbucket.org/lokkju/adobe_case_sensitive_volumes), and I'm really anxious to share it.
 I've forked the code to update it for CS6.
 
+## Prerequisites
+
+1.  `Xcode`
+    You can install it from [AppStore](https://itunes.apple.com/bg/app/xcode/id497799835?mt=12).
+2.  Command Line Tools for Xcode
+    You can install it from Xcode's `Preferences` -> `Downloads`.
+
 ## A step-by-step installation instructions
 
 1.  Create a `.sparsebundle` pseudo-image to install CS6:
@@ -26,14 +33,14 @@ I've forked the code to update it for CS6.
     mkdir -p /Volumes/Adobe\ CS6\ SparseBundle/Adobe
     ```
 
-3.  Create an extra `/Applications/Adobe` folder on the boot drive (we will trick the installer with this temporary directory)
+3.  Create an extra `/Applications/Adobe` folder on the boot drive (we will trick the installer with this temporary directory.)
     ``` bash
     mkdir -p /Applications/Adobe
     ```
 
 4.  Get the hack, compile it, and run it
 
-    OK, at this point you'll need to edit the `Makefile` and set the `CS6_INSTALLER_PATH` variable to point to the `Install.app` directory
+    OK, at this point you'll need to edit the `Makefile` and set the `CS6_INSTALLER_PATH` variable to point to the `Install.app` directory.
     The current one tries to find it automatically, but it *may* fail...
 
     ``` bash
@@ -45,7 +52,7 @@ I've forked the code to update it for CS6.
     ```
 
 5.  When asked, select `/Applications/Adobe` for installation directory rather than just `/Applications`, but **don't** click the `Install` button!!
-    Remember, **don't** click the `Install` button just yet
+    Remember, **don't** click the `Install` button just yet.
 
 6.  Now, time to do one more hack - remove the `/Applications/Adobe` directory and replace it with a symlink to the `/Adobe` directory from the SparseBundle.
 
@@ -65,7 +72,7 @@ I've forked the code to update it for CS6.
 
 9.  That's it!
 
-    Just remember that you'll need to mount the SparseBundle every time you need to use Adobe's products
+    Just remember that you'll need to mount the SparseBundle every time you need to use Adobe's products.
 
 
 ## Thanks
