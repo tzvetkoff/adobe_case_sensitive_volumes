@@ -12,8 +12,10 @@ I've forked the code to update it for CS6.
 ## Prerequisites
 
 1.  `Xcode`
-    You can install it from [AppStore](https://itunes.apple.com/bg/app/xcode/id497799835?mt=12).
-2.  Command Line Tools for Xcode
+
+    You can install it from [AppStore](https://itunes.apple.com/app/xcode/id497799835).
+2.  Command Line Tools for Xcode.
+
     You can install it from Xcode's `Preferences` -> `Downloads`.
 
 ## A step-by-step installation instructions
